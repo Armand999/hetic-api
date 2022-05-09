@@ -71,5 +71,5 @@ jobs:
         run: |
           echo "$EC2_KEY" > armandkey.pem
           sudo chmod 600 armandkey.pem
-          ssh -i armandkey.pem -oStrictHostKeyChecking=no ubuntu@172.31.25.200 "docker stop api" || true
-          ssh -i armandkey.pem -oStrictHostKeyChecking=no ubuntu@172.31.25.200 "docker run --rm --name api -i -d -p 80:5000 armandkou/hetic-api:latest"
+          ssh -i armandkey.pem -oStrictHostKeyChecking=no ubuntu@100.26.139.17 "docker stop api" || true
+          ssh -i armandkey.pem -oStrictHostKeyChecking=no ubuntu@100.26.139.17 "docker run --rm --name api -i -d -p 80:5000 armandkou/hetic-api:latest"
